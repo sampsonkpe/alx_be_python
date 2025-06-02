@@ -7,8 +7,12 @@ time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 # Use match-case to determine message based on priority
 match priority:
-    case "high" | "medium" | "low":
-        print(f"Reminder: '{task}' is a {priority} priority task", end="")
+    case "high":
+        print(f"Reminder: '{task}' is a high priority task", end="")
+    case "medium":
+        print(f"Reminder: '{task}' is a medium priority task", end="")
+    case "low":
+        print(f"Reminder: '{task}' is a low priority task", end="")
     case _:
         print(f"Reminder: '{task}' has an unspecified priority", end="")
 
